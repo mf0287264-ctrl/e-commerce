@@ -11,18 +11,11 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 interface ParamsType {
   id: string;
 }
-
-export const dynamic = "force-dynamic";
-
-export default async function page({
-  params,
-}: {
-  params: Promise<ParamsType>;
-}) {
+export default async function page({ params }: { params: ParamsType }) {
   const { id } = await params;
   const res = await getAllSubCategories(id);
   const category = await getSpecificCaregory(id);
-
+  console.log(res);
   return (
     <div>
       <HeaderForBrandDedailes

@@ -6,7 +6,7 @@ export async function getAllCaregories(): Promise<CategoryType[] | null> {
     const res = await fetch(
       "https://ecommerce.routemisr.com/api/v1/categories",
       {
-        cache: "no-store",
+        cache: "force-cache",
       },
     );
     const finalRes = await res.json();
@@ -23,7 +23,7 @@ export async function getSpecificCaregory(
     const res = await fetch(
       `https://ecommerce.routemisr.com/api/v1/categories/${id}`,
       {
-        cache: "no-store",
+        cache: "force-cache",
       },
     );
     const finalRes = await res.json();
@@ -40,7 +40,7 @@ export async function getAllSubCategories(
     const res = await fetch(
       `https://ecommerce.routemisr.com/api/v1/categories/${id}/subcategories`,
       {
-        cache: "no-store",
+        cache: "force-cache",
       },
     );
     const finalRes = await res.json();
