@@ -145,8 +145,20 @@ export default function LoginFormCard() {
                   control={form.control}
                   render={({ field, fieldState }) => (
                     <Field data-invalid={fieldState.invalid}>
-                      <FieldLabel htmlFor="password" className="text-[16px]">
-                        Password <span className="text-red-600">*</span>
+                      <FieldLabel
+                        htmlFor="password"
+                        className="text-[16px] flex justify-between"
+                      >
+                        <span>
+                          {" "}
+                          Password <span className="text-red-600">*</span>
+                        </span>
+                        <Link
+                          href={"/forgotpassword"}
+                          className="text-green-600 text-sm hover:text-green-800"
+                        >
+                          Forgot Password?
+                        </Link>
                       </FieldLabel>
                       <div className="relative">
                         {" "}
