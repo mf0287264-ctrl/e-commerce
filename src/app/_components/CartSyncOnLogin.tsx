@@ -33,6 +33,18 @@ export default function CartSyncOnLogin() {
           lastRes = await addToCard(item._id);
         }
       }
+
+      if (lastRes?.status !== "success") {
+        synced.current = false;
+        toast.error("Couldn't sync your cart", {
+          id: "cart-sync",
+          description: "Please refresh the page or sign in again.",
+          richColors: true,
+          position: "top-right",
+        });
+        return;
+      }
+
       if (lastRes?.status === "success") {
         setCartCounter(lastRes.numOfCartItems);
         setTotalProducts(lastRes.data.products);
@@ -47,8 +59,16 @@ export default function CartSyncOnLogin() {
       }
     }
 
-    sync();
-  }, [session]);
+    sync().catch(() => {
+      synced.current = false;
+      toast.error("Couldn't sync your cart", {
+        id: "cart-sync",
+        description: "Please refresh the page or sign in again.",
+        richColors: true,
+        position: "top-right",
+      });
+    });
+  }, [clearLocalCart, localCart, session, setCardId, setCartCounter, setTotalPrice, setTotalProducts]);
 
   return null;
 }
