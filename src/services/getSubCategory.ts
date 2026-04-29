@@ -11,7 +11,7 @@ export async function getSpecificSubCaregory(
     const res = await fetch(
       `https://ecommerce.routemisr.com/api/v1/categories/${id}/subcategories`,
       {
-        cache: "force-cache",
+        cache: "no-store",
       },
     );
     const finalRes = await res.json();
@@ -28,7 +28,7 @@ export async function getSubCategoryInfo(
     const res = await fetch(
       `https://ecommerce.routemisr.com/api/v1/subcategories/${id}`,
       {
-        cache: "force-cache",
+        cache: "no-store",
       },
     );
     const finalRes = await res.json();
@@ -46,7 +46,7 @@ export async function getProductSubCaregory(
     const res = await fetch(
       `https://ecommerce.routemisr.com/api/v1/products/?subcategory=${id}`,
       {
-        cache: "force-cache",
+        cache: "no-store",
       },
     );
     const finalRes = await res.json();

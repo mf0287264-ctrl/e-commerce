@@ -11,11 +11,18 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 interface ParamsType {
   id: string;
 }
-export default async function page({ params }: { params: ParamsType }) {
+
+export const dynamic = "force-dynamic";
+
+export default async function page({
+  params,
+}: {
+  params: Promise<ParamsType>;
+}) {
   const { id } = await params;
   const res = await getAllSubCategories(id);
   const category = await getSpecificCaregory(id);
-  console.log(res);
+
   return (
     <div>
       <HeaderForBrandDedailes
@@ -49,7 +56,7 @@ export default async function page({ params }: { params: ParamsType }) {
             </h2>
 
             <p className="text-gray-500 text-center text-sm mb-8 max-w-xs">
-              This category doesn't have any subcategories yet.
+              This category does not have any subcategories yet.
             </p>
 
             <Link
