@@ -227,6 +227,17 @@ export default function Footer() {
           <p className="text-slate-500 text-sm">
             © 2026 FreshCart. All rights reserved.
           </p>
+          <p className="text-slate-500 text-sm">
+            Created by{" "}
+            <Link
+              href="https://www.linkedin.com/in/mohamed-farid-6587ba298/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-slate-300 transition-colors duration-200 hover:text-green-500"
+            >
+              Mohamed Farid
+            </Link>
+          </p>
           <div className="flex items-center gap-4 text-slate-400">
             <FaCcVisa size={32} />
             <FaCcMastercard size={32} />
