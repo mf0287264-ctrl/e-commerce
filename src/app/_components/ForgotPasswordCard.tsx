@@ -1,19 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
-import { Controller, useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
-import { IoIosArrowRoundBack, IoMdMail } from "react-icons/io";
-import { FaKey, FaLock } from "react-icons/fa";
+import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
-import { forgotPass } from "../_action/ForgotPassword";
-import BeatLoader from "react-spinners/esm/BeatLoader";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { Controller, useForm } from "react-hook-form";
+import { FaKey, FaLock } from "react-icons/fa";
+import { IoIosArrowRoundBack, IoMdMail } from "react-icons/io";
+import BeatLoader from "react-spinners/esm/BeatLoader";
 import { toast } from "sonner";
+import { z } from "zod";
+import { forgotPass } from "../_action/ForgotPassword";
 
 const emailSchema = z.object({
   email: z.string().email("Enter a valid email address"),

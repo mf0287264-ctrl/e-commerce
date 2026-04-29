@@ -1,10 +1,9 @@
 "use client";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MdLocationOn, MdSettings } from "react-icons/md";
-import { MdChevronRight } from "react-icons/md";
-import { Card, CardHeader, CardContent } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
+import { MdChevronRight, MdLocationOn, MdSettings } from "react-icons/md";
 
 const links = [
   { href: "/profile/addresses", label: "My Addresses", icon: MdLocationOn },

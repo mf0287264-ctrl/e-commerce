@@ -1,16 +1,15 @@
+import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import NavBar from "./_components/NavBar";
-import { Toaster } from "@/components/ui/sonner";
-import AuthProviders from "./_providers/AuthProviders";
 import CardContext from "./_Context/CartContext";
-import { getCartLogs } from "./_action/addToCart";
-import Footer from "./_components/Footer";
-import { Suspense } from "react";
 import WishlistContext from "./_Context/WishlistContext";
+import { getCartLogs } from "./_action/addToCart";
 import { getWishlistLogs } from "./_action/addToWishlist";
 import CartSyncOnLogin from "./_components/CartSyncOnLogin";
+import Footer from "./_components/Footer";
+import NavBar from "./_components/NavBar";
+import AuthProviders from "./_providers/AuthProviders";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +22,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "e-commerce",
+  title: "FreshCart",
   description: "e-commerce app",
 };
 

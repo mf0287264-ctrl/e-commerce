@@ -1,16 +1,13 @@
 "use client";
 
-import * as React from "react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Controller, useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardHeader,
-  CardTitle,
   CardDescription,
   CardFooter,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 import {
   Field,
@@ -19,14 +16,16 @@ import {
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useSession } from "next-auth/react";
+import { Controller, useForm } from "react-hook-form";
+import { FaSave, FaUser } from "react-icons/fa";
+import { toast } from "sonner";
+import { updateLoggedUserData } from "../_action/ProfileAuth";
 import {
   formSchema,
   ProfileInfo,
 } from "../profile/settings/ProfileSettings.Schema";
-import { FaSave, FaUser } from "react-icons/fa";
-import { useSession } from "next-auth/react";
-import { updateLoggedUserData } from "../_action/ProfileAuth";
-import { toast } from "sonner";
 
 export function ProfileFormSettings({
   UserId,

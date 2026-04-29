@@ -1,4 +1,3 @@
-import React from "react";
 import FogotPasswordCaptionCard from "../_components/FogotPasswordCaptionCard";
 import ForgotPasswordCard from "../_components/ForgotPasswordCard";
 

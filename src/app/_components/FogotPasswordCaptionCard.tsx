@@ -1,4 +1,3 @@
-import React from "react";
 import { FaLock, FaShieldAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 export default function FogotPasswordCaptionCard() {

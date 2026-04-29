@@ -28,11 +28,11 @@ import {
   FaUserPlus,
   FaUsers,
 } from "react-icons/fa";
+import { HiEye, HiEyeOff } from "react-icons/hi";
 import { IoMail } from "react-icons/io5";
 import { toast } from "sonner";
 import { formDataInputType, logInSchema } from "../(auth)/login/login.schema";
 import BeatLoader from "./../../../node_modules/react-spinners/esm/BeatLoader";
-import { HiEye, HiEyeOff } from "react-icons/hi";
 export default function LoginFormCard() {
   const [checked, setChecked] = React.useState<boolean>(false);
   const [isLoading, setIsLoading] = React.useState(false);

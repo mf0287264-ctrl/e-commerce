@@ -1,13 +1,4 @@
 "use client";
-import { useState, useContext } from "react";
-import { RiFlashlightFill } from "react-icons/ri";
-import { FaShareAlt } from "react-icons/fa";
-import { TiShoppingCart } from "react-icons/ti";
-import { Spinner } from "@/components/ui/spinner";
-import { toast } from "sonner";
-import { addToCard } from "../_action/addToCart";
-import { cartContextP } from "../_Context/CartContext";
-import AddToWishlistProduct from "./AddToWishlistProduct";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -21,7 +12,16 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Spinner } from "@/components/ui/spinner";
 import { useSession } from "next-auth/react";
+import { useContext, useState } from "react";
+import { FaShareAlt } from "react-icons/fa";
+import { RiFlashlightFill } from "react-icons/ri";
+import { TiShoppingCart } from "react-icons/ti";
+import { toast } from "sonner";
+import { addToCard } from "../_action/addToCart";
+import { cartContextP } from "../_Context/CartContext";
+import AddToWishlistProduct from "./AddToWishlistProduct";
 
 export default function QuantityProduct({
   productId,

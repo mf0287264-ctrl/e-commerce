@@ -1,9 +1,8 @@
 "use client";
 
-import * as React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
+import * as React from "react";
 import { Controller, useForm } from "react-hook-form";
-import { MdLock } from "react-icons/md";
 import { HiEye, HiEyeOff } from "react-icons/hi";
 
 import { Button } from "@/components/ui/button";
@@ -16,16 +15,16 @@ import {
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { Spinner } from "@/components/ui/spinner";
+import { signOut } from "next-auth/react";
+import { FaLock } from "react-icons/fa";
+import { toast } from "sonner";
+import { clearUserCookies } from "../_action/clearUserCookies";
+import { updateLoggedUserPassword } from "../_action/ProfileAuth";
 import {
   ChangePasswordInfo,
   changePasswordSchema,
 } from "../profile/settings/ProfileSettingsPass.shema";
-import { FaLock } from "react-icons/fa";
-import { updateLoggedUserPassword } from "../_action/ProfileAuth";
-import { toast } from "sonner";
-import { Spinner } from "@/components/ui/spinner";
-import { signOut } from "next-auth/react";
-import { clearUserCookies } from "../_action/clearUserCookies";
 
 export default function ProfileFormSettingsPass() {
   const [showCurrent, setShowCurrent] = React.useState(false);

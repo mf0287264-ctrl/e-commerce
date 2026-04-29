@@ -6,7 +6,6 @@ import {
   getSpecificCaregory,
 } from "@/services/getAllCategories";
 import Link from "next/link";
-import React from "react";
 import { FaBoxOpen, FaFilter, FaTags } from "react-icons/fa";
 import { IoIosClose } from "react-icons/io";
 interface paramsType {

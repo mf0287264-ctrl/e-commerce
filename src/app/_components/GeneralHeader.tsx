@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaTags, FaThLarge, FaBoxOpen, FaLayerGroup } from "react-icons/fa";
+import { FaBoxOpen, FaLayerGroup, FaTags } from "react-icons/fa";
 
 type Props = {
   isBrand?: boolean;

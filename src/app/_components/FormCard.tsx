@@ -1,42 +1,32 @@
 "use client";
-import * as React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
+import * as React from "react";
 import { Controller, useForm } from "react-hook-form";
 
 import { Button } from "@/components/ui/button";
 import {
-  Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Field,
-  FieldDescription,
   FieldError,
   FieldGroup,
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroupTextarea,
-} from "@/components/ui/input-group";
-import { FaFacebook, FaGoogle, FaUserPlus } from "react-icons/fa";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Progress } from "@/components/ui/progress";
 import Link from "next/link";
-import axios from "axios";
-import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { FaFacebook, FaGoogle, FaUserPlus } from "react-icons/fa";
+import { HiEye, HiEyeOff } from "react-icons/hi";
+import { toast } from "sonner";
+import { signUpAction } from "../(auth)/signup/signup.action";
 import { formDataType, signUpSchema } from "../(auth)/signup/signup.type";
 import BeatLoader from "./../../../node_modules/react-spinners/esm/BeatLoader";
-import { signUpAction } from "../(auth)/signup/signup.action";
-import { HiEye, HiEyeOff } from "react-icons/hi";
-import { Progress } from "@/components/ui/progress";
 export default function FormCard() {
   const [isLoading, setIsLoading] = React.useState(false);
   const router = useRouter();

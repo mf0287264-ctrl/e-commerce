@@ -1,11 +1,10 @@
 import { ProductType } from "@/types/Product.type";
-import { CiHeart } from "react-icons/ci";
+import Link from "next/link";
 import { FaEye } from "react-icons/fa";
 import { FiRefreshCcw } from "react-icons/fi";
-import Rating from "./Rating";
-import Link from "next/link";
 import AddToCardBtn from "./AddToCardBtn";
 import AddToWishlist from "./AddToWishlist";
+import Rating from "./Rating";
 
 type Props = {
   product: ProductType;

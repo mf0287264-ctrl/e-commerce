@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { BsBagCheckFill, BsBoxSeam } from "react-icons/bs";
 import { FaBagShopping } from "react-icons/fa6";
-import AllOrderAccordion from "../_components/AllOrderAccordion";
 import { getUserOrder } from "../_action/allOrders.action";
+import AllOrderAccordion from "../_components/AllOrderAccordion";
 
 export default async function page() {
   const allOrders = await getUserOrder();

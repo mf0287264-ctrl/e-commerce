@@ -1,23 +1,21 @@
-import ProductCard from "./_components/ProductCard";
-import { getProducts } from "@/services/Product";
-import Slider from "./_components/Slider";
 import slider1 from "@/images/slider1.png";
 import slider2 from "@/images/slider2.png";
 import slider3 from "@/images/slider3.jpg";
-import { MdHeadsetMic, MdLocalShipping } from "react-icons/md";
+import { getAllCaregories } from "@/services/getAllCategories";
+import { getProducts } from "@/services/Product";
 import { FaArrowRight, FaShieldAlt } from "react-icons/fa";
 import { IoMdRefresh } from "react-icons/io";
-import { getAllCaregories } from "@/services/getAllCategories";
+import { MdHeadsetMic, MdLocalShipping } from "react-icons/md";
+import ProductCard from "./_components/ProductCard";
+import Slider from "./_components/Slider";
 // import CategotyCard from "./_components/CategotyCard";
 const CategotyCardByLazy = lazy(() => import("./_components/CategotyCard"));
 
-import Link from "next/link";
-import { TiArrowRight } from "react-icons/ti";
-import { BsStars } from "react-icons/bs";
-import { lazy, Suspense } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
-import { getUserId } from "@/utils/getUserId";
-import { getUserOrder } from "./_action/allOrders.action";
+import Link from "next/link";
+import { lazy, Suspense } from "react";
+import { BsStars } from "react-icons/bs";
+import { TiArrowRight } from "react-icons/ti";
 
 const mySlider: string[] = [slider1.src, slider2.src, slider3.src];
 

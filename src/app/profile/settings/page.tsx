@@ -1,11 +1,10 @@
 import { ProfileFormSettings } from "@/app/_components/ProfileFormSettings";
-import React from "react";
-import { getUserId } from "@/utils/getUserId";
-import { getUserRole } from "@/utils/getUserRole";
-import ProfileSideCard from "@/app/_components/ProfileSideCard";
 import ProfileFormSettingsPass from "@/app/_components/ProfileFormSettingsPass";
 import ProfileHeader from "@/app/_components/ProfileHeader";
+import ProfileSideCard from "@/app/_components/ProfileSideCard";
 import { getUserName } from "@/utils/getMyName";
+import { getUserId } from "@/utils/getUserId";
+import { getUserRole } from "@/utils/getUserRole";
 export default async function page() {
   const UserId = await getUserId();
   const userRole = await getUserRole();

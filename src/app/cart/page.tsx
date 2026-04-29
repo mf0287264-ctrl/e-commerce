@@ -1,27 +1,4 @@
 "use client";
-import React, { useContext, useState } from "react";
-import { BsBoxSeam, BsCheckLg, BsTag, BsTrash2 } from "react-icons/bs";
-import {
-  FaLock,
-  FaPlus,
-  FaShieldAlt,
-  FaShoppingCart,
-  FaTrash,
-} from "react-icons/fa";
-import { cartContextP } from "../_Context/CartContext";
-import Link from "next/link";
-import { TiMinus } from "react-icons/ti";
-import { RiShoppingBagFill } from "react-icons/ri";
-import { MdLocalShipping } from "react-icons/md";
-import { IoIosArrowRoundBack } from "react-icons/io";
-import {
-  deleteAllProductFromCard,
-  deleteProductFromCard,
-  updateProductFromCard,
-} from "../_action/addToCart";
-import { Spinner } from "@/components/ui/spinner";
-import { toast } from "sonner";
-import { Progress } from "@/components/ui/progress";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -33,7 +10,30 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { Progress } from "@/components/ui/progress";
+import { Spinner } from "@/components/ui/spinner";
 import { useSession } from "next-auth/react";
+import Link from "next/link";
+import { useContext, useState } from "react";
+import { BsBoxSeam, BsCheckLg, BsTag, BsTrash2 } from "react-icons/bs";
+import {
+  FaLock,
+  FaPlus,
+  FaShieldAlt,
+  FaShoppingCart,
+  FaTrash,
+} from "react-icons/fa";
+import { IoIosArrowRoundBack } from "react-icons/io";
+import { MdLocalShipping } from "react-icons/md";
+import { RiShoppingBagFill } from "react-icons/ri";
+import { TiMinus } from "react-icons/ti";
+import { toast } from "sonner";
+import {
+  deleteAllProductFromCard,
+  deleteProductFromCard,
+  updateProductFromCard,
+} from "../_action/addToCart";
+import { cartContextP } from "../_Context/CartContext";
 
 export default function page() {
   const {

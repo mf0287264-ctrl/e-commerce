@@ -1,6 +1,5 @@
 import Link from "next/link";
-import React from "react";
-import { FaFolder, FaFolderOpen } from "react-icons/fa";
+import { FaFolderOpen } from "react-icons/fa";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 export default function SubCategoryCard({

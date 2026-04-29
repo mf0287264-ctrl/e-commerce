@@ -1,8 +1,7 @@
-import React from "react";
-import GeneralHeader from "../_components/GeneralHeader";
-import { IoIosArrowRoundForward } from "react-icons/io";
-import Link from "next/link";
 import { getAllCaregories } from "@/services/getAllCategories";
+import Link from "next/link";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import GeneralHeader from "../_components/GeneralHeader";
 
 export default async function page() {
   const res = await getAllCaregories();

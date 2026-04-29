@@ -4,11 +4,11 @@ import ProductDetailsSliderImage from "@/app/_components/ProductDetailsSliderIma
 import QuantityProduct from "@/app/_components/QuantityProduct";
 import { getProductBasedOnCategory } from "@/services/getAllCategories";
 import { getSpecificProduct } from "@/services/getSpecificProduct";
+import Link from "next/link";
 import { FaShieldAlt, FaShippingFast } from "react-icons/fa";
 import { IoIosRefresh, IoMdHome } from "react-icons/io";
-import Rating from "../../_components/Rating";
-import Link from "next/link";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import Rating from "../../_components/Rating";
 
 interface probType {
   params: {

@@ -11,25 +11,23 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { GetUserAddressType } from "@/types/ProfileAddress.type";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Plus } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
+import { FaPhoneAlt, FaTrash } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
+import { MdEdit } from "react-icons/md";
+import BeatLoader from "react-spinners/esm/BeatLoader";
+import { toast } from "sonner";
+import { addAddress, removeAddress } from "../_action/Address.action";
 import {
   AddressFormData,
   addressSchema,
 } from "../profile/addresses/ProfileAddress.schema";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
-import { addAddress, removeAddress } from "../_action/Address.action";
-import { toast } from "sonner";
-import { GetUserAddressType } from "@/types/ProfileAddress.type";
-import { FiEdit2, FiTrash2 } from "react-icons/fi";
-import { BsTelephone } from "react-icons/bs";
-import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
-import { FaPhoneAlt, FaTrash } from "react-icons/fa";
-import { MdEdit } from "react-icons/md";
-import { useRouter } from "next/navigation";
-import BeatLoader from "react-spinners/esm/BeatLoader";
 export default function AddressClient({
   addresses,
 }: {

@@ -5,8 +5,6 @@ import {
   getSpecificCaregory,
 } from "@/services/getAllCategories";
 import Link from "next/link";
-import React from "react";
-import { BsBoxSeam } from "react-icons/bs";
 import { FaFolderOpen } from "react-icons/fa";
 import { IoIosArrowRoundBack } from "react-icons/io";
 

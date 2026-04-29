@@ -2,9 +2,7 @@ import HeaderForBrandDedailes from "@/app/_components/HeaderForBrandDedailes";
 import ProductCard from "@/app/_components/ProductCard";
 import { Button } from "@/components/ui/button";
 import { getBrandInfo, getSpecificBrand } from "@/services/getSpecificBrand";
-import { PackageOpen } from "lucide-react";
 import Link from "next/link";
-import React from "react";
 import { FaBoxOpen, FaFilter, FaTags } from "react-icons/fa";
 import { IoIosClose } from "react-icons/io";
 interface probType {

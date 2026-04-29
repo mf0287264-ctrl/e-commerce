@@ -1,29 +1,27 @@
 "use client";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ProductType } from "@/types/Product.type";
-import { FaCheck, FaShieldAlt, FaStar, FaTruck } from "react-icons/fa";
-import { MdOutlineRateReview, MdShield } from "react-icons/md";
-import { IoMdRefresh } from "react-icons/io";
-import { BsBoxSeam } from "react-icons/bs";
-import { useEffect, useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
+import { ProductType } from "@/types/Product.type";
 import { useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { BsBoxSeam } from "react-icons/bs";
+import { FaCheck, FaShieldAlt, FaStar, FaTruck } from "react-icons/fa";
+import { IoMdRefresh } from "react-icons/io";
 
-import Rating from "./Rating";
+import BeatLoader from "react-spinners/esm/BeatLoader";
 import { toast } from "sonner";
 import {
   createReviewForProduct,
   getProductReviews,
 } from "../_action/Review.action";
-import BeatLoader from "react-spinners/esm/BeatLoader";
 export default function NavAndTabsProduct({
   product,
 }: {

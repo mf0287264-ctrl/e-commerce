@@ -1,10 +1,7 @@
-import React, { Suspense } from "react";
-import GeneralHeader from "../_components/GeneralHeader";
-import { Card } from "@/components/ui/card";
 import { getAllBrands } from "@/services/getAllBrands";
-import { IoIosArrowRoundForward } from "react-icons/io";
 import Link from "next/link";
-import LazyLoadingBrand from "../_components/LazyLoadingBrand";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import GeneralHeader from "../_components/GeneralHeader";
 
 export default async function page() {
   const brands = await getAllBrands();

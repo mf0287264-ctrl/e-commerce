@@ -1,10 +1,7 @@
-import React from "react";
-import image from "@/images/loginBg.png";
-import { MdHeadsetMic, MdLocalShipping } from "react-icons/md";
-import { FaShieldAlt } from "react-icons/fa";
 import LoginFormCard from "@/app/_components/LoginFormCard";
-import { getMyToken } from "@/utils/getMyToken";
-import { redirect } from "next/navigation";
+import image from "@/images/loginBg.png";
+import { FaShieldAlt } from "react-icons/fa";
+import { MdHeadsetMic, MdLocalShipping } from "react-icons/md";
 export default function page() {
   return (
     <>

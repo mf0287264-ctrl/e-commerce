@@ -1,6 +1,5 @@
 import Link from "next/link";
-import React from "react";
-import { FaFolderOpen, FaHeadset, FaShieldAlt, FaUser } from "react-icons/fa";
+import { FaFolderOpen, FaHeadset, FaShieldAlt } from "react-icons/fa";
 
 export default function HeaderForBrandDedailes({
   title,

@@ -1,18 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
-import { Controller, useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
-import { IoMdMail } from "react-icons/io";
-import { FaCheck, FaKey, FaLock } from "react-icons/fa";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { Controller, useForm } from "react-hook-form";
+import { FaCheck, FaLock } from "react-icons/fa";
 import { HiEye, HiEyeOff } from "react-icons/hi";
 import BeatLoader from "react-spinners/esm/BeatLoader";
-import { useRouter } from "next/navigation";
 import { toast } from "sonner";
+import { z } from "zod";
 import { resetPassword } from "../_action/ForgotPassword";
 
 const passwordSchema = z
