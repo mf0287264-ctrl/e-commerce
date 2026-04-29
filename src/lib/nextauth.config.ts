@@ -1,9 +1,6 @@
 import axios from "axios";
 import { NextAuthOptions } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
-import { refresh } from "next/cache";
-import { cookies } from "next/headers";
-import { email } from "zod";
 // type MyObject = {
 //   success: boolean;
 //   data?: string;
@@ -24,7 +21,7 @@ export const nextAuthConfig: NextAuthOptions = {
         );
         if (res.data.message) {
           return {
-            // id: res.data.token,
+            id: res.data.user.email,
             name: res.data.user.name,
             email: res.data.user.email,
             realTokenFromBackend: res.data.token,
