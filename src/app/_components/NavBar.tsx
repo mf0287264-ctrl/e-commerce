@@ -543,9 +543,9 @@ export default function NavBar() {
           {/* User */}
           {session ? (
             <div className="flex flex-col gap-1 py-2 border-b">
-              <div className="flex items-center gap-2 py-1.5 text-gray-700">
-                <FaRegUser className="text-gray-400" size={14} />
-                <span>{session.user?.name}</span>
+              <div className="flex items-center gap-2 py-1.5 text-gray-700 hover:text-green-800 transition ">
+                <FaRegUser size={14} />
+                <Link href={"/profile/settings"}>{session.user?.name}</Link>
               </div>
               <button
                 onClick={logOutHandler}
@@ -558,7 +558,7 @@ export default function NavBar() {
             <div className="flex gap-3 py-2 border-b">
               <Link
                 href="/login"
-                className="text-green-600 hover:text-green-800 transition"
+                className="text-green-600 hover:text-green-800 transition "
                 onClick={() => setMenuOpen(false)}
               >
                 Sign In
